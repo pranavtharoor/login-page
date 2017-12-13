@@ -1,0 +1,41 @@
+@media only screen and (min-width: 600px)
+{
+	body
+	{
+		flex-direction: row;
+	}
+
+	#info
+	{
+		flex-grow: 2;
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	.card
+	{
+		width: 20vw;
+		height: auto;
+	}
+
+	.card > p
+	{
+		font-size: 1vw;
+	}
+
+	#login
+	{
+		width: 35vw;
+		height: 100vh;
+	}
+
+	input
+	{
+		width: 20vw;
+	}
+
+	button
+	{
+		width: 15vw;
+	}
+}
