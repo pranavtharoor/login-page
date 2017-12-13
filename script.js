@@ -1,11 +1,11 @@
 /**********************************
 FUCNTION TO MAKE GOOGLE KEEP LAYOUT
 NOTE : Container must be FLEX
-**********************************/
+**********************************
 
 document.addEventListener('DOMContentLoaded', function() 
 {
-	var COL_COUNT = 3; // set this to however many columns you want
+	var COL_COUNT = 3;
 	var col_heights = [];
 	var container = document.getElementById("info");
 
@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', function()
 	var highest = Math.max.apply(Math, col_heights);
 	container.style.height = highest+'px';  
 });
+*/
 
-
-
+$(document).ready(function()
+{
+	$("#info").slick(
+	{
+		infinite: true,
+		speed: 500,
+		variableWidth: true,
+		autoplay: true,
+		dots: true
+	});
+});

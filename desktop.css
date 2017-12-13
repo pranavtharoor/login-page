@@ -14,13 +14,19 @@
 
 	.card
 	{
-		width: 20vw;
-		height: auto;
+		width: 60vw;
+		height: 60vh;
 	}
 
-	.card > p
+	img
+	{
+		width: 17vw;
+	}
+
+	.block > p
 	{
 		font-size: 1vw;
+		max-width: 30vw;
 	}
 
 	#login
