@@ -1,21 +1,8 @@
-@media only screen and (min-width: 600px)
+@media screen and (min-width: 600px), (orientation: landscape)
 {
 	body
 	{
 		flex-direction: row;
-	}
-
-	#info
-	{
-		flex-grow: 2;
-		display: flex;
-		flex-flow: column wrap;
-	}
-
-	.card
-	{
-		width: 60vw;
-		height: 60vh;
 	}
 
 	img
@@ -23,12 +10,10 @@
 		width: 17vw;
 	}
 
-	.block > p
+	h1
 	{
-		font-size: 1vw;
-		max-width: 30vw;
+		font-size: 6vh;
 	}
-
 	#login
 	{
 		width: 35vw;
@@ -40,8 +25,138 @@
 		width: 20vw;
 	}
 
+	input[type="radio"]
+	{
+		display: block;
+	}
+
 	button
 	{
 		width: 15vw;
 	}
+
+	#info
+	{
+		flex-grow: 2;
+	}
+
+	.accordion
+	{
+		width: 70vw;
+		height: 60vh;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	ul
+	{
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul > li
+	{
+		display: table-cell;
+		vertical-align: bottom;
+		position: relative;
+		width: 20%;
+  		height: 60vh;
+  		transition: all 500ms ease;
+	}
+
+	ul > li > div
+	{
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	ul > li > div > *
+	{
+		margin: 0;
+		width: 100%;
+		position: relative;
+		z-index: 5;
+		white-space: nowrap;
+		overflow: hidden;
+		transform: translateX(-10vh);
+		transition: all 400ms ease;
+	}
+
+	ul > li > div > h2
+	{
+		width: 100%;
+		margin: 5vh;
+		font-size: 3vh;
+		text-transform: uppercase;
+		transform: rotate(-90deg) translateY(-10vh);
+	}
+
+	ul > li > div > p
+	{
+		font-size: 2vh;
+		opacity: 0;
+	}
+
+	li:nth-child(odd) 
+	{
+    	background: #BDBDBD;
+	}
+
+	ul:hover > li
+	{
+		width: 8%;
+	}
+
+	ul:hover > li:hover
+	{
+		width: 60%;
+	  	background: #FFC107;
+	  	vertical-align: middle;
+	}
+
+	ul:hover > li:hover > div
+	{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	ul:hover > li:not(:hover) > div > h2
+	{
+	 	transform: translateY(11vh);
+	}
+
+	ul:hover > li:hover > div > p
+	{
+		opacity: 1;
+		white-space: normal;
+	}
 }
+
+@media screen and (max-height: 600px) and (orientation: landscape)
+{
+	form > input
+	{
+		width: 90%;
+		margin: 1vh;
+	}
+
+	button
+	{
+		height: 8vh;
+	}
+
+	ul:hover > li:hover > div > p
+	{
+		opacity: 1;
+		white-space: normal;
+		font-size: 1.5vw;
+	}
+}
+

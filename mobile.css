@@ -1,4 +1,4 @@
-html
+*
 {
 	user-select: none;
 }
@@ -8,7 +8,7 @@ body
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	margin: 0;
 	background: #212121;
 }
@@ -21,38 +21,16 @@ form
 	flex-direction: column;
 }
 
-#info
+h1
 {
-	max-height: 100vh;
-	margin: 0;
-	overflow: hidden;
-}
-
-.block > h2
-{
-	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-}
-
-.block > p
-{
+	color: #FAFAFA;
 	font-family: 'Open Sans', sans-serif;
-}
-
-.card
-{
-	width: 40vw;
-	background: gray;
-	margin: 5px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: row;
-	float: left;
 }
 
 #login
 {
+	position: sticky;
 	background: rgb(251, 251, 251);
 	width: 100vw;
 	height: 40vh;
@@ -100,10 +78,16 @@ button
 
 button:hover
 {
+	outline: none;
 	border: solid 1px #FAB115;	
 	background: none;
 	color: #EF476F;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button:focus
+{
+	outline: none;
 }
 
 img
@@ -111,12 +95,40 @@ img
 	width: 20%;
 }
 
-.workshop
+/**************
+ACCORDION
+**************/
+
+#info
 {
-	background: #3498DB;
+	width: 100%;
 }
 
-.event
+ul
 {
-	background: #E67E22;
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+}
+
+li
+{
+	margin: 1vh auto;
+	width: 90vw;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	padding: 5px;
+	background: #FAFAFA;
+	border-radius: 2px;
+}
+
+li > div > h2
+{
+	color: #212121;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+li > div > p
+{
+	font-family: 'Open Sans', sans-serif;
 }

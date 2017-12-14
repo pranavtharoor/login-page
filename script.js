@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function()
 });
 */
 
+/******************************
+SLICK CAROUSEL
+*******************************
+
 $(document).ready(function()
 {
 	$("#info").slick(
@@ -34,4 +38,6 @@ $(document).ready(function()
 		autoplay: true,
 		dots: true
 	});
-});
+})
+
+*/
