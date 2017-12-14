@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px), (orientation: landscape)
+@media screen and (min-width: 1025px), (orientation: landscape)
 {
 	body
 	{
@@ -32,6 +32,7 @@
 
 	button
 	{
+		padding: 12px;
 		width: 15vw;
 	}
 
@@ -135,6 +136,7 @@
 	ul:hover > li:hover > div > p
 	{
 		opacity: 1;
+		min-width: 25vw;
 		white-space: normal;
 	}
 }
@@ -144,12 +146,12 @@
 	form > input
 	{
 		width: 90%;
-		margin: 1vh;
+		margin: 2vh;
 	}
 
 	button
 	{
-		height: 8vh;
+		padding: 4px;
 	}
 
 	ul:hover > li:hover > div > p
